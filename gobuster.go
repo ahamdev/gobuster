@@ -42,8 +42,7 @@ func main() {
 
 	// Déclaration des flags
 	dictionaryPath := flag.String("d", "", "Path to dictionary file")
-	quietMode := flag.Bool("q", false, "When set to true, only show HTTP 200")
-	showAll := flag.Bool("a", false, "When set to true, show all results, including non-200 status codes")
+	quietMode := flag.Bool("q", false, "Quiet mdoe : When set to true, only show HTTP 200")
 	target := flag.String("t", "", "Target to enumerate")
 	workers := flag.Int("w", 1, "Number of workers to run")
 	logToFile := flag.Bool("l", false, "When set to true, log results to a file")
@@ -146,12 +145,10 @@ func main() {
 	for result := range results {
 		if *quietMode {
 			if result.Status == http.StatusOK {
-				fmt.Println(result.URL)
+				fmt.Println(result.URL, result.Status)
 			}
 		} else {
-			if result.Status == http.StatusOK || *showAll {
-				fmt.Printf("%s %d\n", result.URL, result.Status)
-			}
+			fmt.Printf("%s %d\n", result.URL, result.Status)
 		}
 
 		if *logToFile {

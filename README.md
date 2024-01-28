@@ -5,7 +5,7 @@ Gobuster is a scanning tool written in Golang.
 
 Windows
 
-Download last go version : https://go.dev/dl/go1.21.6.windows-amd64.msi
+Download and install last go version : https://go.dev/dl/go1.21.6.windows-amd64.msi
 
 Mac OS
 
