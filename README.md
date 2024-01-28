@@ -32,9 +32,8 @@ go build gobuster.go
 Options available :
 
 ```bash
--a  Otacon mode : Show all results, including non-200 status codes
 -l  Log mode : Log results to a file
--q  Quiet mode : Only show HTTP 200
+-q  Quiet mode : Only show HTTP 200 (Default)
 
 -d  Path to dictionary file (Mandatory)
 -t  Target to enumerate (Mandatory)
