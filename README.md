@@ -1,5 +1,5 @@
 # Gobuster
-Gobuster scanning tool written in Golang
+Gobuster is a scanning tool written in Golang.
 
 ## Installation
 
@@ -16,12 +16,31 @@ Linux
 
 ```bash
 wget https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
+	
+sudo tar -C /usr/local/ -xzf go1.13.5.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+
 ```
 
 ## Usage
 
+```bash
 go run gobuster.go -h : Show help
 go build gobuster.go
+```
+
+Options available :
+
+```bash
+-a  Otacon mode : Show all results, including non-200 status codes
+-l  Log mode : Log results to a file
+-q  Quiet mode : Only show HTTP 200
+
+-d  Path to dictionary file (Mandatory)
+-t  Target to enumerate (Mandatory)
+-w  Number of workers to run (Default 1)
+
+```
 
 ## Examples
 
