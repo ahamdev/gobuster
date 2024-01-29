@@ -33,7 +33,7 @@ Options available :
 
 ```bash
 -l  Log mode : Log results to a file
--q  Quiet mode : Only show HTTP 200 (Default)
+-q  Quiet mode : Only show HTTP 200
 
 -d  Path to dictionary file (Mandatory)
 -t  Target to enumerate (Mandatory)
